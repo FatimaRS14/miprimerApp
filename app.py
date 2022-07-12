@@ -45,3 +45,8 @@ def post(post_id):
     post = get_post(post_id) # utiliza la función get_post() para
      #obtener la entrada de blog asociada con el ID especificado y almacenar el resultado en la variable post
     return render_template('post.html', post=post)
+
+
+@app.route('/create', methods=('GET', 'POST'))
+def create():
+    return render_template('create.html')
