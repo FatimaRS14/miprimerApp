@@ -29,6 +29,9 @@ def get_post(post_id):
         abort(404)
     return post
 
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your secret key'
+
 
 @app.route('/')
 def index():
